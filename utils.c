@@ -1,13 +1,13 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool char_in_str(char* str, char x) {
+int char_in_str(char* str, char x) {
     int n = strlen(str);
     for (int i = 0; i < n; i++) {
         if (str[i] == x)
-            return true;
+            return i;
     }
-    return false;
+    return -1;
 }
 
 bool est_egal(char* str1, char* str2) {
